@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">InfoSys Timetable</string>
+
+    <string name="sundayText">No Class Today\nYou can enjoy Holiday</string>
+    <string name="mondayText">CI6204 SOFTWARE PROJECT MANAGEMENT\n
+        VENUE: LHS-TR+47 Tutorial Room, The Hive, LHS-02-01\n
+        TIME: 0900 to 1200</string>
+    <string name="tuesdayText">CI6227 Data Mining\n
+        VENUE: LT7, Block NS2, NS2-02-05, North Spine\n
+        TIME: 1830 to 2130</string>
+    <string name="wednesdayText">CI6207 Human Computer Interaction\n
+        VENUE: Teo Sai Nen (TSN) PC Lab CS02-35 WKWSCI Building\n
+        TIME: 1830 to 2130</string>
+    <string name="thursdayText">No Class Today\nYou can enjoy Holiday</string>
+    <string name="fridayText">CI6233 Information Systems Leadership\n
+        VENUE: LHN-TR+30 Tutorial Room, LHN-01-18, The Arc\n
+        TIME: 1830 to 2130</string>
+    <string name="saturdayText">CI6222 Mobile and Ubiquitous Applications\n
+        VENUE: Executive Seminar Room (ESR) CS02-19 WKWSCI Bldg\n
+        TIME: 0900 to 1200</string>
+
+</resources>
