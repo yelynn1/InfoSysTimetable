@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.time.OffsetDateTime;
+import java.util.Date;
 import java.util.zip.Inflater;
 
 
@@ -35,9 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences myPrefs = getSharedPreferences("myPref", MODE_PRIVATE);
         SharedPreferences.Editor e = myPrefs.edit();
-        String courseName = myPrefs.getString("courseName","default");
+        int count = myPrefs.getInt("courseID",0);
         TextView todayText = (TextView) findViewById(R.id.todayInfo);
-        todayText.setText(courseName);
+        todayText.setText("");
+
+        for(int i=1; i<=count; i++){
+            String courseName = myPrefs.getString(String.valueOf(i),"No course added, please go to setting to add course detail");
+            setTodayInfo(courseName);
+        }
 
     }
 
@@ -60,36 +66,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void setTodayInfo(){
+    private void setTodayInfo(String record){
+
+        String[] splitedRecord = record.split("#");
+        String showData = splitedRecord[0] + ". " + splitedRecord[1].toUpperCase() + "\nDate:  " + splitedRecord[2]
+                + "\nTime: " + splitedRecord[3] + "\nVenue: " + splitedRecord[4] + "\n";
+
+
         TextView todayText = (TextView) findViewById(R.id.todayInfo);
+
         OffsetDateTime calendar = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             calendar = OffsetDateTime.now();
             String day = String.valueOf(calendar.getDayOfWeek());
-            todayText.setText(day);
-            switch (day) {
-                case "SUNDAY":
-                    todayText.setText(R.string.sundayText);
-                    break;
-                case "MONDAY":
-                    todayText.setText(R.string.mondayText);
-                    break;
-                case "TUESDAY":
-                    todayText.setText(R.string.tuesdayText);
-                    break;
-                case "WEDNESDAY":
-                    todayText.setText(R.string.wednesdayText);
-                    break;
-                case "THURSDAY":
-                    todayText.setText(R.string.thursdayText);
-                    break;
-                case "FRIDAY":
-                    todayText.setText(R.string.fridayText);
-                    break;
-                case "SATURDAY":
-                    todayText.setText(R.string.saturdayText);
-                    break;
-                }
+
+            if(day.toUpperCase().equals(splitedRecord[2].toUpperCase())){
+                todayText.append(showData);
+            }
+
+//            switch (day) {
+//                case "SUNDAY":
+//                    todayText.setText(R.string.sundayText);
+//                    break;
+//                case "MONDAY":
+//                    todayText.setText(R.string.mondayText);
+//                    break;
+//                case "TUESDAY":
+//                    todayText.setText(R.string.tuesdayText);
+//                    break;
+//                case "WEDNESDAY":
+//                    todayText.setText(R.string.wednesdayText);
+//                    break;
+//                case "THURSDAY":
+//                    todayText.setText(R.string.thursdayText);
+//                    break;
+//                case "FRIDAY":
+//                    todayText.setText(R.string.fridayText);
+//                    break;
+//                case "SATURDAY":
+//                    todayText.setText(R.string.saturdayText);
+//                    break;
+//                }
         }
     }
 
