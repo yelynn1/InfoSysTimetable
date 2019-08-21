@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">InfoSys Timetable</string>
 
-    <string name="sundayText">No Class Today\nYou can enjoy Holiday</string>
+    <string name="sundayText">Yay... No Class Today\nYou can enjoy Holiday</string>
     <string name="mondayText">CI6204 SOFTWARE PROJECT MANAGEMENT\n
         VENUE: LHS-TR+47 Tutorial Room, The Hive, LHS-02-01\n
         TIME: 0900 to 1200</string>
@@ -18,5 +18,42 @@
     <string name="saturdayText">CI6222 Mobile and Ubiquitous Applications\n
         VENUE: Executive Seminar Room (ESR) CS02-19 WKWSCI Bldg\n
         TIME: 0900 to 1200</string>
+
+
+    <string-array name="course_array">
+        <item>CI6207</item>
+        <item>CI6204</item>
+        <item>CI6206</item>
+        <item>CI6202</item>
+        <item>CI6222</item>
+        <item>CI6227</item>
+        <item>CI6228</item>
+        <item>CI6229</item>
+        <item>CI6230</item>
+        <item>CI6233</item>
+        <item>H6702</item>
+        <item>H6751</item>
+    </string-array>
+    
+    <!--
+    0 - name
+    1 - date
+    2 - time
+    3 - venue
+    4 - lecturer
+     -->
+    <string name="CI6207">Human-Computer Interaction - Users, Tasks &amp; Designs#Wednesday#6:30pm to 9:30pm#Teo Sai Nen (TSN) PC Lab CS02-35 WKWSCI Building#Mr Nirmal Prabu S/O Sangar</string>
+    <string name="CI6204">Software Project Management #Monday#9:00am to 12:00pm#LHS-TR+47 Tutorial Room, The Hive, LHS-02-01#Assoc Prof Alton Chua Yeow Kuan</string>
+    <string name="CI6206">Internet Programming#Saturday#9:00am to 12:00pm#Teo Sai Nen (TSN) PC Lab CS02-35 WKWSCI Building#Mr Wong Twee Wee</string>
+    <string name="CI6202">Information Architecture &amp; Design #Tuesday#2:00pm to 5:00pm#MAS Executive Classroom 1, SPMS-MAS-03-06, SPMS#Dr Heok Kay Heng Adrian</string>
+    <string name="CI6222">Mobile &amp; Ubiquitous Applications#Saturday#9:00am to 12:00pm#Executive Seminar Room (ESR) CS02-19 WKWSCI Bldg#Mr Vaidhyanathan Hariharan</string>
+    <string name="CI6227">Data Mining #Tuesday#6:30pm to 9:30pm#LT7, Block NS2, NS2-02-05, North Spine#Dr Sidorov Vasily</string>
+    <string name="CI6228">Managing Information Systems #Thursday#9:00am to 12:00pm#MAS Executive Classroom 2, SPMS-MAS-03-07, SPMS#Assoc Prof Lee Chei Sian</string>
+    <string name="CI6229">Management Of Information Systems Outsourcing#Saturday#1:00pm to 4:00pm#LHN-TR+30 Tutorial Room, LHN-01-18, The Arc#Dr Lam Wing Hong</string>
+    <string name="CI6230">Information Systems Security #Saturday#1:00pm to 4:00pm#Teo Sai Nen (TSN) PC Lab CS02-35 WKWSCI Building#Dr Pan Juin Yang Jonathan</string>
+    <string name="CI6233">Information Systems Leadership #Friday#6:30pm to 9:30pm#LHN-TR+30 Tutorial Room, LHN-01-18, The Arc#Dr Lam Wing Hong</string>
+    <string name="H6702">Research Methods In Human Information Behaviour #Monday#2:00pm to 5:00pm#MMC Room, CS02-34, Level 2, WKWSCI Bldg#Assoc Prof Sin Sei Ching Joanna</string>
+    <string name="H6751">Text &amp; Web Mining#Friday#6:30pm to 9:30pm#WKW BUILDING, TSN LAB (CS02-35)#DR TAN KIEN WENG LUKE</string>
+
 
 </resources>

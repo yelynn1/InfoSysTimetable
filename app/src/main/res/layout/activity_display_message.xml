@@ -7,6 +7,11 @@
     tools:context=".DisplayMessageActivity"
     android:orientation="vertical">
 
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/courseID" />
+
         <EditText
             android:id="@+id/courseName"
             android:layout_width="match_parent"
@@ -40,12 +45,25 @@
             android:hint="Location"
             android:inputType="text"/>
 
+        <EditText
+            android:id="@+id/lecturer"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="50dp"
+            android:hint="Lecturer"
+            android:inputType="text"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Save"
             android:id="@+id/save"
             android:onClick="actionSave"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addedCourses"/>
 
 
 </LinearLayout>

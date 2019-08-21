@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static String extra_message = "NTUTimetableIntent";
+    boolean noCourse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +40,20 @@ public class MainActivity extends AppCompatActivity {
         int count = myPrefs.getInt("courseID",0);
         TextView todayText = (TextView) findViewById(R.id.todayInfo);
         todayText.setText("");
+        todayText.append("Total Course Added : " + count + "\n\n");
+
+        noCourse = true;
 
         for(int i=1; i<=count; i++){
             String courseName = myPrefs.getString(String.valueOf(i),"No course added, please go to setting to add course detail");
             setTodayInfo(courseName);
+        }
+
+        if(count == 0){
+            todayText.append("You haven't add any courses. Please go to setting to add course.");
+        }
+        else if(noCourse){
+            todayText.append(getString(R.string.sundayText));
         }
 
     }
@@ -69,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
     private void setTodayInfo(String record){
 
         String[] splitedRecord = record.split("#");
-        String showData = splitedRecord[0] + ". " + splitedRecord[1].toUpperCase() + "\nDate:  " + splitedRecord[2]
-                + "\nTime: " + splitedRecord[3] + "\nVenue: " + splitedRecord[4] + "\n";
+        String showData = splitedRecord[1].toUpperCase() + "\nDate:  " + splitedRecord[2]
+                + "\nTime: " + splitedRecord[3] + "\nVenue: " + splitedRecord[4] + "\nLecturer : " + splitedRecord[5];
 
 
         TextView todayText = (TextView) findViewById(R.id.todayInfo);
@@ -82,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
             if(day.toUpperCase().equals(splitedRecord[2].toUpperCase())){
                 todayText.append(showData);
+                noCourse = false;
             }
 
 //            switch (day) {
